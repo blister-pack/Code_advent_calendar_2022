@@ -25,6 +25,4 @@ for line in read:
             totalCals_onElf3 = sum(calories_onElf)
         calories_onElf.clear()
 
-
-
 print(totalCals_onElf1 + totalCals_onElf2 + totalCals_onElf3)
