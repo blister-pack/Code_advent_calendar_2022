@@ -15,6 +15,7 @@ for line in read:
         if sum(calories_onElf) > top3_elves[0]:
             top3_elves[0] = sum(calories_onElf)
             top3_elves = sorted(top3_elves)
+        calories_onElf.clear()
 
 print(sum(top3_elves))
 
