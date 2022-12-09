@@ -17,8 +17,13 @@ for rucksack in read:
 
     pocket1 = rucksack[:(no_items//2)]
     pocket2 = rucksack[no_items//2:no_items]
-
-    
     #  only works with //, with / Python returns a float and that creates an error
 
+    value_of_items = 0
 
+    for letter in pocket1:
+        for letter2 in pocket2:
+            if letter == letter2:
+                value_of_items = value_of_items + points_and_letters[letter]
+
+print(value_of_items)
