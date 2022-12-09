@@ -26,3 +26,5 @@ for line in read:
         calories_onElf.clear()
 
 print(totalCals_onElf1 + totalCals_onElf2 + totalCals_onElf3)
+
+#  use sorted function to simply check if value makes the list (compare to 3rd position) then sort each time a value makes the list
