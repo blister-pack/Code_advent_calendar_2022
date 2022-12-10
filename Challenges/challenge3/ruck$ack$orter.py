@@ -9,22 +9,24 @@ alphabet_lowerAndUpper = string.ascii_lowercase + string.ascii_uppercase
 
 points_and_letters = {}
 
-
 for number, letter in enumerate(alphabet_lowerAndUpper):
     points_and_letters[letter] = number + 1
     #  created the dict with the alphabet and their respective point values
+
+
+
 value_of_items = 0
 
-for rucksack in read:
-    no_items = len(rucksack) - 1
+for number, rucksack in enumerate(read[2::3]):
+    rucksack1 = read[number*3]
+    rucksack2 = read[number*3+1]
+    rucksack3 = read[number*3+2]
 
-    pocket1 = rucksack[:(no_items//2)]
-    pocket2 = rucksack[no_items//2:no_items]
-    #  only works with //, with / Python returns a float and that creates an error
-
-    for letter in pocket1:
-        if letter in pocket2:
+    for letter in rucksack1:
+        if letter in rucksack2 and letter in rucksack3:
             value_of_items = value_of_items + points_and_letters[letter]
             break
+
+#  in the second part of the challenge I just need to find the common element in all three rucksacks
 
 print(value_of_items)
