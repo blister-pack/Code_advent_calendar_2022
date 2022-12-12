@@ -5,4 +5,5 @@ with open('input4.txt','r') as f:
         areas = section_pairs.partition(',')
         #  how do I save this without the '\n'
         elf1_area = str(areas[0])
-        elf2_area[:-1] = str(areas[2])
+        elf2_area = str(areas[2])
+        
