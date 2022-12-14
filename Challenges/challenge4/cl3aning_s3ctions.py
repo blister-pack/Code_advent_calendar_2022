@@ -15,4 +15,5 @@ with open('input4.txt','r') as f:
         if any(area in first_area for area in second_area):
             overlap_areas += 1
 
+
 print(overlap_areas)
