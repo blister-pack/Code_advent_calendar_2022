@@ -9,9 +9,10 @@ with open('input4.txt','r') as f:
 
 
 
-        first_area = range(int(elf1_area[0]), int(elf1_area[1]))
-        second_area = range(int(elf2_area[0]), int(elf2_area[1]))
+        first_area = range(int(elf1_area[0]), int(elf1_area[1])+1)
+        second_area = range(int(elf2_area[0]), int(elf2_area[1])+1)
 
-        if first_area in second_area or second_area in first_area:
+        if (second_area.start >= first_area.start and second_area.stop <= first_area.stop) or (first_area.start >= second_area.start and first_area.stop <= second_area.stop):
             overlap_areas += 1
-            #  it's not counting
+
+print(overlap_areas)
