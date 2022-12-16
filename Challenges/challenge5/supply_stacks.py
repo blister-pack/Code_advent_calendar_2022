@@ -17,8 +17,9 @@ with open('input5.txt', 'r') as f:
         from_stack = globals()[f'stack{supp[3]}']
         to_stack = globals()[f'stack{supp[5]}']
 
-        for numBoxes in range(0, boxes_to_move):
-            movedBox = from_stack.pop()
-            to_stack.append(movedBox)
+
+        movedBox = from_stack[-boxes_to_move:len(from_stack)]
+        del from_stack[-boxes_to_move:len(from_stack)]
+        to_stack.extend(movedBox)
 
 print(f'{stack1[-1]}{stack2[-1]}{stack3[-1]}{stack4[-1]}{stack5[-1]}{stack6[-1]}{stack7[-1]}{stack8[-1]}{stack9[-1]}')
