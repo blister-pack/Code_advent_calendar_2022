@@ -20,6 +20,6 @@ with open('input5.txt', 'r') as f:
 
         movedBox = from_stack[-boxes_to_move:len(from_stack)]
         del from_stack[-boxes_to_move:len(from_stack)]
-        to_stack.extend(movedBox)
+        to_stack.extend(movedBox)  #  if I use append() it will add another list as an element
 
 print(f'{stack1[-1]}{stack2[-1]}{stack3[-1]}{stack4[-1]}{stack5[-1]}{stack6[-1]}{stack7[-1]}{stack8[-1]}{stack9[-1]}')
