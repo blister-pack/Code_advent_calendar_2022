@@ -1,2 +1,3 @@
 # Code_advent_calendar_2022
  Trying to solve some puzzles of the code advent calendar
+When I reached day 7 of the challenge I quickly realized I didn't know enough to complete the challenge. As such I created the folder '000Learning' as a means to accompany some learning efforts. That way perhaps I can somewhat record my progress and a part of my learning journey in order to complete said challenges.
