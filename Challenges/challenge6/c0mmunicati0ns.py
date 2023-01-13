@@ -10,23 +10,10 @@ with open('input6.txt', 'r') as f:
 
     for index, letter in enumerate(f_content[2:-2], start=1):
 
-
-        letter_dict['letter1'] = letter_dict['letter2']
-        letter_dict['letter2'] = letter_dict['letter3']
-        letter_dict['letter3'] = letter_dict['letter4']
-        letter_dict['letter4'] = letter_dict['letter5']
-        letter_dict['letter5'] = letter_dict['letter6']
-        letter_dict['letter6'] = letter_dict['letter7']
-        letter_dict['letter7'] = letter_dict['letter8']
-        letter_dict['letter8'] = letter_dict['letter9']
-        letter_dict['letter9'] = letter_dict['letter10']
-        letter_dict['letter10'] = letter_dict['letter11']
-        letter_dict['letter11'] = letter_dict['letter12']
-        letter_dict['letter12'] = letter_dict['letter13']
-        letter_dict['letter13'] = letter_dict['letter14']
+        for i in range(1, 14):
+            letter_dict[f'letter{i}'] = letter_dict[f'letter{i + 1}']
         letter_dict['letter14'] = letter
 
-        #  block of code is really messy, but I didn't have a different idea
 
 
         #  now I need to check if they're all different, if they are, print the index and we should be done
